@@ -1,0 +1,42 @@
+{:paths ["src"]
+
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+
+        org.clojure/core.cache      {:mvn/version "1.0.217"}
+        org.clojure/core.memoize    {:mvn/version "1.0.250"}
+        org.clojure/core.rrb-vector {:mvn/version "0.1.2"}
+        org.clojure/tools.cli       {:mvn/version "1.0.206"}
+
+        io.replikativ/incognito {:mvn/version "0.2.8-SNAPSHOT"}
+        io.replikativ/konserve  {:mvn/version "0.5.1"}
+        com.taoensso/carmine    {:mvn/version "3.1.0"}
+
+        missionary/missionary {:mvn/version "b.23"}
+
+        }
+
+ :aliases {:test {:extra-paths ["test"]
+                  :extra-deps  {org.clojure/test.check {:mvn/version "1.1.0"}
+                                }
+                  }
+
+           :cljs {:extra-deps {org.clojure/clojurescript {:mvn/version "1.10.893"}
+                               thheller/shadow-cljs      {:mvn/version "2.16.6"}
+                               binaryage/devtools        {:mvn/version "1.0.4"}
+                               com.cemerick/piggieback   {:mvn/version "0.2.2"}
+                               cider/piggieback          {:mvn/version "0.5.3"}
+                               }
+                  }
+
+           :dev {:extra-paths ["dev"]
+                 :extra-deps  {cider/cider-nrepl {:mvn/version "0.27.2"}
+                               }
+                 }
+
+           :profiling {:extra-deps {criterium/criterium          {:mvn/version "0.4.6"}
+                                    org.clojure/test.check       {:mvn/version "1.1.0"}
+                                    com.infolace/excel-templates {:mvn/version "0.3.3"}
+                                    }
+                       }
+           }
+ }

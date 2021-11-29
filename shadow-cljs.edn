@@ -1,0 +1,26 @@
+{:deps {:aliases [:dev :cljs]}
+
+ :nrepl {:port 3001}
+
+ :dev-http {8100 "public"}
+
+ :builds
+ {
+  :node1 {:target    :node-script
+          :main      demo/main
+          :output-to "build/node1.js"
+          :devtools  {:repl-init-ns demo
+                      :repl-pprint  true
+                      }
+          }
+
+  :browser1 {:target   :browser
+             :modules  {:main {:init-fn demo-web/main}}
+             :devtools {:repl-init-ns demo-web
+                        :repl-pprint  true
+                        }
+             ;; :compiler-options {:output-feature-set :es6}
+             ;; :compiler-options {:output-feature-set :es-next}
+             }
+  }
+ }

@@ -1,0 +1,13 @@
+* TLDR;
+
+Dev for Node:
+
+clj -M:dev:cljs:test -m shadow.cljs.devtools.cli watch node1
+
+
+Dev for Browser:
+
+clj -M:dev:cljs:test -m shadow.cljs.devtools.cli watch browser1
+
+
+See http://localhost:9630

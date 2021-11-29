@@ -13,3 +13,8 @@ pom.xml.asc
 *.swo
 *.swn
 *~
+.cpcache/
+.shadow-cljs/
+.cider-repl-history
+node_modules/
+build/
