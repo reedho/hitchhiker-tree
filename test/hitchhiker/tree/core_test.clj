@@ -8,11 +8,14 @@
             [hitchhiker.tree.core :refer :all]
             [clojure.core.async :refer [promise-chan] :as async]))
 
+#_
 (deftest reduce<-test
   (is (= 45 (<?? (reduce< (fn [res s]
                             (go-try (+ res s)))
                           0
                           (range 10))))))
+
+(def <?? identity)
 
 (deftest simple-read-only-behavior
   (testing "Basic searches"
